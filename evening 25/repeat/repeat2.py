@@ -1,0 +1,106 @@
+# Наример:
+# Name: Maya Angelou
+# Name: Chimamanda Ngozi Adichie
+# Name: Tobias Wolff
+# Name: Sherman Alexie
+# Name: Jane Austen
+# Результат:
+# ['Adichie', 'Alexie', 'Angelou', 'Austen', 'Wolff']
+
+
+# names = ['Maya Angelou', 'Chimamanda Ngozi Adichie', 'Tobias Wolff', 'Sherman Alexie', 'Jane Austen']
+
+# names = []
+# for x in range(0, 5):
+#     name = input('Vvedite FIO:')
+#     names.append(name)
+
+
+# result = []
+# for x in names:
+#     x = x.split(' ')
+#     print(x)
+#     result.append(x[-1])
+
+#     result.sort()
+#     print(result)
+
+#---------------------------------------------------
+
+# range(start, stop, [step]) - возвращает последовательность из целых чисел , начиная с start до stop, возвращает итериумый тип данных range 
+
+
+# x = range(1, 101)
+# print(list(x))
+
+# print(x)
+# for num in x:
+#     print(num)
+
+# result = 0
+# for num in range(1, 101):
+#     result += num
+   
+# print(result)
+
+ #/// TASK8 \\\
+# Вам дан список, напишите код, который будет соединять в новый список элементы по n-ному шагу
+# Например:
+# n = 3
+# list_ = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n']
+# Результат:
+# [['a', 'd', 'g', 'j', 'm'], ['b', 'e', 'h', 'k', 'n'], ['c', 'f', 'i', 'l']]
+
+# list_ = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n']
+# n = 3
+# list1 = []
+# list1 = []
+# list2 = []
+# list3 = []
+
+# for x in range(0, len(list_), n):
+#     list1.append(list_[x])
+#     list2.append(list_[x+1])
+#     if x + 2 >= len(list_):
+#         continue
+#     list3.append(list_[x+2])
+
+# result = [list1, list2, list3]
+# print(list1)
+# print([['a', 'd', 'g', 'j', 'm'], ['b', 'e', 'h', 'k', 'n'], ['c', 'f', 'i', 'l']])
+# print(result)
+
+
+#/// TASK5 \\\
+# Создайте список с 3 вложенными списками списками, где внутри должно быть три 0
+# Результат:
+# [[0, 0, 0], [0, 0, 0], [0, 0, 0]]
+
+# res = []
+
+# for x in range(0, 3):
+#     ls = []
+#     for x in range(0, 3):
+#         ls.append(0)
+#     res.append(ls)
+
+# print(res)
+
+
+# /// TASK4 \\\
+# Вам дан список из 3 чисел, выведите все возможные комбинации с этими числами
+# Например:
+# list_ = [1, 2, 3]
+# Результат:
+# 1 2 3
+# 1 3 2
+# 2 1 3
+# 2 3 1
+# 3 1 2
+# 3 2 1
+
+from itertools import permutations
+
+res = list(permutations([1, 2,3], 3))
+print(res)
+
